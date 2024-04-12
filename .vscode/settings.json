@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "rust-analyzer.linkedProjects": [
+        "./contracts/reclaim-cosmwasm/Cargo.toml"
+    ]
+}
