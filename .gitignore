@@ -24,4 +24,4 @@ contract.wasm*
 /node_modules
 
 # env
-.env
+wasmkit.config.js
