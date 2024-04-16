@@ -1,5 +1,3 @@
-#![cfg(feature = "vanilla")]
-
 use crate::state::{Config, Epoch};
 use cosmwasm_std::{Order, StdResult, Storage};
 use cw_storage_plus::{Item, Map};

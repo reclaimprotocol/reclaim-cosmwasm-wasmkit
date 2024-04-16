@@ -1,11 +1,7 @@
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
-#[cfg(feature = "vanilla")]
 use cosmwasm_std::Uint128;
-
-#[cfg(feature = "secret")]
-use secret_std::Uint128;
 
 use crate::{
     claims::Proof,

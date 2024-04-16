@@ -2,8 +2,8 @@
   "reclaim_cosmwasm": {
     "default": {
       "chainId": "pion-1",
-      "codeId": 4455,
-      "contractAddress": "neutron1cqh6yx9jt2c6khkedc6cu2v6h8vv7apmtye56lg76flhture79jsxmrke5"
+      "codeId": 4481,
+      "contractAddress": "neutron17cpv4efc0n2qx774l9hw6k47jqnqjsa6rhc0jywl5ca7vdk7euzqdh5k34"
     }
   }
 }

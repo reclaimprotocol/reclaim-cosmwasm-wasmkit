@@ -15,15 +15,6 @@ exclude = [
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[features]
-# for more explicit tests, cargo test --features=backtraces
-#backtraces = ["cosmwasm-std/backtraces"]
-# use library feature to disable all instantiate/execute/query exports
-library = []
-default = ["vanilla"]
-secret = ["secret-std", "secret-toolkit"]
-vanilla = ["cosmwasm-std", "cw-storage-plus"]
-
 [package.metadata.scripts]
 optimize = """docker run --rm -v "$(pwd)":/code \
   --mount type=volume,source="$(basename "$(pwd)")_cache",target=/target \
@@ -32,15 +23,9 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 """
 
 [dependencies]
-cw-storage-plus = { version = "1.1.0", optional = true }
-secret-std = { package = "secret-cosmwasm-std", version = "1.1.11", optional = true }
-secret-toolkit = { version = "0.10.0", optional = true }
+cw-storage-plus = "1.1.0"
 #cosmwasm-schema = "1.5.0"
-cosmwasm-std = { version = "1.5.0", features = [
-    "cosmwasm_1_3",
-    # Enable this if you only deploy to chains that have CosmWasm 1.4 or higher
-    # "cosmwasm_1_4",
-], optional = true }
+cosmwasm-std = "1.5.0"
 cw2 = "1.1.1"
 sha2 = "0.10.8"
 sha3 = { version = "0.10.8"}

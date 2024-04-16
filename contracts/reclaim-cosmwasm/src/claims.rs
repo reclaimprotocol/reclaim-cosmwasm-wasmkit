@@ -2,7 +2,6 @@
 
 use crate::ContractError;
 mod identity_digest;
-#[cfg(feature = "vanilla")]
 use cosmwasm_std::DepsMut;
 use k256::{
     ecdsa::{RecoveryId, Signature, VerifyingKey}, // type aliases
@@ -11,8 +10,6 @@ use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use sha3::{Digest, Keccak256};
 
-#[cfg(feature = "secret")]
-use secret_std::DepsMut;
 
 pub fn append_0x(content: &str) -> String {
     let mut initializer = String::from("0x");

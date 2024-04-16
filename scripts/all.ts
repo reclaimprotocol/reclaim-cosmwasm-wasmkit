@@ -8,7 +8,7 @@ export default async function run () {
   const reclaim_contract = new ReclaimCosmwasmContract();
   await reclaim_contract.setupClient();
 
-  ///////////////Deploy Contract////////////////
+  // Deploy Contract
 
   const deploy_response = await reclaim_contract.deploy(
     contract_owner
@@ -16,7 +16,7 @@ export default async function run () {
   console.log(deploy_response);
   console.log(contract_owner);
 
-  /////////////////Instantiate Contract////////////////
+  // Instantiate Contract
 
   const contract_info = await reclaim_contract.instantiate(
     {
@@ -28,7 +28,8 @@ export default async function run () {
     // customFees, // custom fees here
   );
   console.log(contract_info);
-  /////////////////Add Epch////////////////
+
+  // Add Epch
 
   const epoch_owner = "0x244897572368eadf65bfbc5aec98d8e5443a9072";
 
@@ -43,7 +44,7 @@ export default async function run () {
   );
   console.log(epoch_response);
 
-  /////////////////Verify Proof////////////////
+  // Verify Proof
 
   const owner = "0xe4c20c9f558160ec08106de300326f7e9c73fb7f"
 
