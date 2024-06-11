@@ -54,11 +54,9 @@ export default async function run () {
       "context": "{\"contextAddress\":\"user's address\",\"contextMessage\":\"for acmecorp.com on 1st january\"}",
   }
 
-  const identifier = "0x531322a6c34e5a71296a5ee07af13f0c27b5b1e50616f816374aff6064daaf55"
-
   const signedClaim = {
       "claim": {
-          "identifier": identifier,
+          "identifier": "0x531322a6c34e5a71296a5ee07af13f0c27b5b1e50616f816374aff6064daaf55",
           "owner": owner,
           "epoch": 1,
           "timestampS": 1710157447
